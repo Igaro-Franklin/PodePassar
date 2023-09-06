@@ -48,6 +48,7 @@ label{
 }
 
 button{
+    font-size: 18px;
     font-family: 'Phudu', cursive;
 }
 
@@ -175,4 +176,26 @@ footer span{
     font-weight: bold;
     font-family: 'Mea Culpa', cursive;
     filter: drop-shadow(4px 4px 4px rgb(0, 81, 255));
+}
+
+@media (max-width: 550px){
+    header{
+        font-size: 25px;
+        height: 55px;
+    }
+
+    label{
+        font-size: 18px;
+    }
+
+    #Entrada{
+        padding-top: 15px;
+    }
+
+    input{
+        padding: 3px 5px;
+        height: 25px;
+        font-size: 18px;
+        outline: none;
+    }
 }

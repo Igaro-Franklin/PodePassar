@@ -1,6 +1,6 @@
-alert("Esse sistema está em fase de teste!")
-alert("Se ao excluir um item o valor total não atualizar, é só atualizar a pagina!")
-alert("Não se preocupe, voce não perdera suas compras")
+alert(
+    "Esse sistema está em fase de teste! Se ao excluir um item o valor total não atualizar, é só atualizar a pagina! Não se preocupe, voce não perdera suas compras"
+)
 
 let valorEntrada = parseFloat(localStorage.getItem("valorEntrada")) || 0;
 
