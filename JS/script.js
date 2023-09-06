@@ -1,3 +1,7 @@
+alert("Esse sistema está em fase de teste!")
+alert("Se ao excluir um item o valor total não atualizar, é só atualizar a pagina!")
+alert("Não se preocupe, voce não perdera suas compras")
+
 let valorEntrada = parseFloat(localStorage.getItem("valorEntrada")) || 0;
 
 function atualizarTotal() {
@@ -58,6 +62,8 @@ function adicionarValor() {
         valorEntrada = valorEntradaInput; 
         localStorage.setItem("valorEntrada", valorEntrada); 
         atualizarTotal();
+    }else{
+        alert("Preencha com um valor valido!")
     }
 
     document.getElementById("valorEntrada").value = "";
@@ -92,6 +98,8 @@ function adicionarProduto() {
         salvarTabela(); 
         atualizarTotal(); 
 
+    }else{
+        alert("Verifique se o nome do produto ou o preço estão preenchido!")
     }
 
     document.getElementById("nomeProduto").value = "";
