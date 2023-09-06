@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/CSS/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Rubik+Iso&display=swap" rel="stylesheet">
+
+    <title>Pode Passar!</title>
+</head>
+<body>
+    <header>
+        <div class="tituloPrincipal">
+            <h1>Pode passar!</h1>
+        </div>
+    </header>
+    <main>
+        <div id="Entrada">
+            <label>Qual valor para gastar</label>
+            <div class="containerEntrada">
+                <input type="number" id="valorEntrada">
+                <button onclick="adicionarValor()">Adicionar</button>
+            </div>
+        </div>
+
+        <div id="AdicionarProduto">
+            <div class="containerProduto">
+                <label>Nome do produto:</label>
+                <input type="text" id="nomeProduto">
+            </div>
+            <div class="containerProduto">
+                <label>Valor do produto:</label>
+                <input type="number" id="precoProduto">
+            </div>
+
+            <button onclick="adicionarProduto()">Adicionar</button>
+        </div>
+
+        <div id="TabelaDeCompras">
+            <table>
+                <tr class="tableTitle">
+                    <th class="thProduto">Produto:</th>
+                    <th class="thPreco">R$:</th>
+                    <th class="thBtn"></th>
+                </tr>
+            </table>
+        </div>
+
+        <div id="Total">
+            <div>
+                <h4>Falta gastar:</h4>
+                <p>R$: <span id="totalSpan"></span></p>
+            </div>
+        </div>
+        
+        <div id="limparTudo">
+            <button onclick="limparInformacoes()">Limpar informações</button>
+        </div>
+    </main>
+    <script src="/JS/script.js"></script>
+</body>
+</html>
