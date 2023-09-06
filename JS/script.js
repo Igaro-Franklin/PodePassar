@@ -106,13 +106,6 @@ function adicionarProduto() {
     document.getElementById("precoProduto").value = "";
 }
 
-botaoExcluir.onclick = function () {
-    tabela.deleteRow(novaLinha.rowIndex);
-    atualizarTotal();
-    salvarTabela(); 
-};
-
-
 function salvarTabela() {
     const tabela = document.querySelector("#TabelaDeCompras table");
     const items = [];
