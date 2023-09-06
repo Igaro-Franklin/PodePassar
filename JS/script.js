@@ -56,9 +56,11 @@ function adicionarValor() {
     
     if (!isNaN(valorEntradaInput)) { 
         valorEntrada = valorEntradaInput; 
-        atualizarTotal();
         localStorage.setItem("valorEntrada", valorEntrada); 
+        atualizarTotal();
     }
+
+    document.getElementById("valorEntrada").value = "";
 }
 
 function adicionarProduto() {
@@ -79,7 +81,6 @@ function adicionarProduto() {
 
         const botaoExcluir = document.createElement("button");
         botaoExcluir.innerHTML = '<i class="bi bi-trash3-fill"></i>';
-        botaoExcluir.className = "btnExcluir";
         botaoExcluir.onclick = function () {
             tabela.deleteRow(novaLinha.rowIndex);
             valorEntrada -= precoProduto; 
@@ -88,14 +89,21 @@ function adicionarProduto() {
         };
         celulaExcluir.appendChild(botaoExcluir);
 
-        atualizarTotal(); 
         salvarTabela(); 
+        atualizarTotal(); 
 
     }
 
     document.getElementById("nomeProduto").value = "";
     document.getElementById("precoProduto").value = "";
 }
+
+botaoExcluir.onclick = function () {
+    tabela.deleteRow(novaLinha.rowIndex);
+    atualizarTotal();
+    salvarTabela(); 
+};
+
 
 function salvarTabela() {
     const tabela = document.querySelector("#TabelaDeCompras table");
@@ -124,6 +132,3 @@ function limparTabela(){
         tabela.deleteRow(1);
     }
 }
-
-
-var thBtn = document.getElementsByClassName("thBtn");

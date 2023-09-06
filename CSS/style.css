@@ -1,6 +1,7 @@
 /*
 
 font-family: 'Mea Culpa', cursive;
+font-family: 'Phudu', cursive;
 font-family: 'Rubik Iso', cursive;
 
 */
@@ -16,14 +17,19 @@ body{
 
 header{
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     background-color: rgba(0, 0, 0, 0.678);
-    color: rgb(0, 253, 0);
-    font-size: 25px;
+    color: rgb(0, 81, 255);
+    font-size: 35px;
     font-family: 'Mea Culpa', cursive;
+}
+
+header h1{
+    margin-top: 5px;
+    filter: drop-shadow(6px 6px 10px black);
 }
 
 input{
@@ -37,12 +43,12 @@ input{
 
 label{
     font-size: 25px;
-    font-family: 'Mea Culpa', cursive;
+    font-family: 'Phudu', cursive;
     margin: 10px 0 10px 10px;
 }
 
 button{
-    font-family: 'Mea Culpa', cursive;
+    font-family: 'Phudu', cursive;
 }
 
 #Entrada, #AdicionarProduto{
@@ -61,14 +67,14 @@ button{
 
 #Entrada button{
     width: 120px;
-    background-color: rgb(0, 253, 0);
+    background-color: rgb(0, 81, 255);
 }
 
 #Entrada{
     width: 100%;
     height: 100%;
     color: white;
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(170, 170, 170);
 }
 
 .containerEntrada{
@@ -91,7 +97,7 @@ button{
 #AdicionarProduto button{
     width: 120px;
     margin: 10px auto;
-    background-color: rgb(0, 253, 0);
+    background-color: rgb(0, 81, 255);
 }
 
 .containerProduto{
@@ -111,24 +117,14 @@ table th{
     border-top: 2px solid black;
 }
 
-.btnExcluir {
-    display: flex;
-    margin: auto auto 5px;
-    background-color: red; /* Cor de fundo vermelha (altere conforme necessário) */
-    color: white; /* Cor do texto branco (altere conforme necessário) */
-    border: none;
-    border-radius: 25px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
 
 .tableBorder{
     border-bottom: 1px solid black;
 }
 
 #Total{
-    width: 100%;
-    margin: 20px 0;
+    width: 98%;
+    margin: 20px 1%;
     border: 1px solid black;
 }
 
@@ -139,7 +135,7 @@ table th{
 }
 
 #totalSpan{
-    color: rgb(0, 253, 0);
+    color: rgb(0, 81, 255);
 }
 
 #limparTudo{
@@ -150,11 +146,33 @@ table th{
 }
 
 #limparTudo button{
+    width: 150px;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
+    font-size: 60px;
     font-family: 'Mea Culpa', cursive;
     background-color: black;
     color: white;
     font-size: 20px;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 100px auto 10px;
+    font-weight: 200;
+    font-family: 'Phudu', cursive;
+}
+
+footer p{
+    filter: drop-shadow(2px 2px 2px white);
+}
+
+footer span{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Mea Culpa', cursive;
+    filter: drop-shadow(4px 4px 4px rgb(0, 81, 255));
 }
